@@ -1,0 +1,26 @@
+{
+  "name": "thmoon-utils",
+  "version": "0.0.0-development",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thmoon-team/thmoon-utils.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thmoon-team/thmoon-utils/issues"
+  },
+  "homepage": "https://github.com/thmoon-team/thmoon-utils#readme",
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "devDependencies": {
+    "semantic-release": "^20.1.3"
+  }
+}

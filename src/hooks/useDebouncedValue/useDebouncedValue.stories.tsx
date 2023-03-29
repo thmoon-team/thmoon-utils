@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import type { Meta, Story } from '@storybook/react/types-6-0';
 
-import doc from './useDebounce.doc.md';
+import doc from './useDebouncedValue.doc.md';
 import { useDebouncedValue } from '.';
 
 const Template = () => {

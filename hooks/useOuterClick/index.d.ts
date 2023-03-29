@@ -1,1 +1,0 @@
-export { useOuterClick } from './useOuterClick';

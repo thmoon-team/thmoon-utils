@@ -1,0 +1,6 @@
+{
+    "{src,pages}/**/*.{js,jsx,ts,tsx}": [
+        "eslint --max-warnings=0 --fix \"{src,pages,.storybook}/**/*.+(js|jsx|ts|tsx|json)\"",
+        "prettier --write \"{src,pages,.storybook}/**/*.+(js|jsx|ts|tsx|json)\""
+    ]
+}

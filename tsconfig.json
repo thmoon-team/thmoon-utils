@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "outDir": "build",
+        "target": "es6",
+        "lib": ["es6", "ESNext", "dom", "es2016", "es2017"],
+        "jsx": "react",
+        "moduleResolution": "node",
+        "declaration": true,
+        "allowJs": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": false,
+        "plugins": [{ "name": "typescript-plugin-css-modules", "classnameTransform": "dashes" }],
+        "baseUrl": "./src",
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS",
+            "allowJs": true
+        }
+    },
+    "exclude": [
+        "node_modules", 
+        "build", 
+    ]
+}

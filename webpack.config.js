@@ -115,7 +115,7 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['.tsx', '.ts'],
+        extensions: ['.tsx', '.ts', '.jsx', '.js'],
         plugins: [new TsconfigPathsPlugin()],
     },
     externals: {

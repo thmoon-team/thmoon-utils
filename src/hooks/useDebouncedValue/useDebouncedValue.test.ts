@@ -4,10 +4,10 @@
 
 import { act, renderHook } from '@testing-library/react';
 
-import { useDebounce } from './useDebounce';
+import { useDebouncedValue } from './useDebouncedValue';
 
 const setUp = (value: string, delay: number) =>
-    renderHook(({ value: v, delay: d }) => useDebounce(v, d), {
+    renderHook(({ value: v, delay: d }) => useDebouncedValue(v, d), {
         initialProps: { value, delay },
     });
 
@@ -25,7 +25,7 @@ describe('useBooleanState', () => {
     });
 
     it('should be defined', () => {
-        expect(useDebounce).toBeDefined();
+        expect(useDebouncedValue).toBeDefined();
     });
 
     it('should be returns the debounced value after the specified delay', async () => {

@@ -1,19 +1,16 @@
 ## Usage
 
 ```jsx
-import { useOuterClick } from 'thmoon-utils'
+import { useElementSize } from 'thmoon-utils'
 
 const Demo = () => {
-  const ref = useRef<HTMLDivElement>(null)
-  const [isOpen, setIsOpen] = useState(false)
-  
-  useOuterClick(ref, () => setIsOpen(false) )
+    const { ref, container } = useElementSize<HTMLDivElement>();
 
-  return (
-    <div>
-      <button onClick={() => { setIsOpen(true); } }>open</button>
-      {isOpen && <div ref={ref}>Content</div>}
-    </div>
-  );
+    return (
+        <div>
+            <pre>{JSON.stringify(container, null, 2)}</pre>
+            <div style={{ border: '1px solid black', boxSizing: 'border-box', ...args }} ref={ref} />
+        </div>
+    );
 };
 ```

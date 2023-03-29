@@ -1,22 +1,49 @@
-Hook который принемает ref ДОМ элемент и колбэк который отрабоатет если клик был вне его котента
-
-
 ## Usage
 
 ```jsx
-import { useOuterClick } from 'thmoon-utils'
+import { useTouchDirection } from 'thmoon-utils'
 
 const Demo = () => {
-  const ref = useRef<HTMLDivElement>(null)
-  const [isOpen, setIsOpen] = useState(false)
-  
-  useOuterClick(ref, () => setIsOpen(false) )
+    const [eventType, setEventType] = useState('');
+    const [defectionSwipe, setDefectionSwipe] = useState<DirectionType>();
 
-  return (
-    <div>
-      <button onClick={() => { setIsOpen(true); } }>open</button>
-      {isOpen && <div ref={ref}>Content</div>}
-    </div>
-  );
+    const handleStart = () => {
+        setEventType('start');
+    };
+
+    const handleMove = () => {
+        setEventType('move');
+    };
+
+    const handleEnd = ({ direction }: Direction) => {
+        setEventType('end');
+        setDefectionSwipe(direction);
+    };
+
+    const { onTouchEnd, onTouchMove, onTouchStart } = useTouchDirection({
+        onStart: handleStart,
+        onMove: handleMove,
+        onEnd: handleEnd,
+    });
+
+    return (
+        <>
+            <div>
+                <span>EventType:</span>
+                <span>{eventType}</span>
+            </div>
+            <div>
+                <span>defectionSwipe:</span>
+                <span>{defectionSwipe}</span>
+            </div>
+            <div
+                onTouchEnd={onTouchEnd}
+                onTouchMove={onTouchMove}
+                onTouchStart={onTouchStart}
+            >
+                Try swipe on mobile
+            </div>
+        </>
+    );
 };
 ```

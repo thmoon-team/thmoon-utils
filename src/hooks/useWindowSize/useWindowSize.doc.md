@@ -4,7 +4,7 @@ Hook который принемает ref ДОМ элемент и колбэк
 ## Usage
 
 ```jsx
-import { useOuterClick } from 'thmoon-utils'
+import { useWindowSize } from 'thmoon-utils'
 
 const Demo = () => {
     const windowSizes = useWindowSize();

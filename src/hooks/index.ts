@@ -1,5 +1,5 @@
 export { useBooleanState } from './useBooleanState';
-export { useDebounce } from './useDebounce';
+export { useDebouncedValue } from './useDebouncedValue';
 export { useElementSize } from './useElementSize';
 export { useOuterClick } from './useOuterClick';
 export { useTouchDirection } from './useTouchDirection';

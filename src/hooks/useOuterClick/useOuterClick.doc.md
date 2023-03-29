@@ -1,17 +1,25 @@
-Hook который принемает ref ДОМ элемент и колбэк который отрабоатет если клик был вне его котента
-
-
 ## Usage
 
 ```jsx
-import { useElementSize } from 'thmoon-utils'
+import { useOuterClick } from 'thmoon-utils'
 
 const Demo = () => {
-    const { ref, container } = useElementSize<HTMLDivElement>();
+    const [isOpen, setIsOpen] = useState(false);
+    const ref = useRef<HTMLDivElement>(null);
+    useOuterClick(ref, () => {
+        setIsOpen(false);
+    });
 
     return (
         <div>
-            <div ref={ref} />
+            <button type="button" onClick={() => setIsOpen(true)}>
+                open
+            </button>
+            {isOpen && (
+                <div ref={ref}>
+                    Content
+                </div>
+            )}
         </div>
     );
 };

@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import type { Meta, Story } from '@storybook/react/types-6-0';
 
 import doc from './useDebounce.doc.md';
-import { useDebounce } from '.';
+import { useDebouncedValue } from '.';
 
 const Template = () => {
     const [value, setValue] = useState('');
-    const debouncedValue = useDebounce(value, 1000);
+    const debouncedValue = useDebouncedValue(value, 1000);
 
     return (
         <div>
@@ -17,7 +17,7 @@ const Template = () => {
 };
 
 export default {
-    title: 'hooks/useDebounce',
+    title: 'hooks/useDebounceValue',
     component: Template,
     parameters: {
         docs: {

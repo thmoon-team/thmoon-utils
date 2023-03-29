@@ -1,11 +1,11 @@
 ## Usage
 
 ```jsx
-import { useOuterClick } from 'thmoon-utils'
+import { useDebouncedValue } from 'thmoon-utils'
 
 const Demo = () => {
     const [value, setValue] = useState('');
-    const debouncedValue = useDebounce(value, 1000);
+    const debouncedValue = useDebouncedValue(value, 1000);
 
     return (
         <div>

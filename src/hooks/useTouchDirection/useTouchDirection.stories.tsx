@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import type { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Direction } from 'utils';
+import { Direction, DirectionType } from 'utils';
 
 import doc from './useTouchDirection.doc.md';
 import { useTouchDirection } from '.';
 
 const Template = () => {
     const [eventType, setEventType] = useState('');
-    const [defectionSwipe, setDefectionSwipe] = useState<Direction>();
+    const [defectionSwipe, setDefectionSwipe] = useState<DirectionType>();
 
     const handleStart = () => {
         setEventType('start');
@@ -18,7 +18,7 @@ const Template = () => {
         setEventType('move');
     };
 
-    const handleEnd = (direction: Direction) => {
+    const handleEnd = ({ direction }: Direction) => {
         setEventType('end');
         setDefectionSwipe(direction);
     };
@@ -44,7 +44,9 @@ const Template = () => {
                 onTouchMove={onTouchMove}
                 onTouchStart={onTouchStart}
                 style={{ width: '300px', height: '300px', border: '1px solid black' }}
-            />
+            >
+                Try swipe on mobile
+            </div>
         </>
     );
 };

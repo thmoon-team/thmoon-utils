@@ -5,13 +5,14 @@ import doc from './useWindowSize.doc.md';
 import { useWindowSize } from '.';
 
 const Template = () => {
-    const size = useWindowSize();
+    const windowSizes = useWindowSize();
 
     return (
         <>
             <div>
                 <span>WindowSize:</span>
-                <span>{size}</span>
+                <span>width: {windowSizes?.width}</span>
+                <span>height: {windowSizes?.height}</span>
             </div>
             <div>change window size for look demo</div>
         </>

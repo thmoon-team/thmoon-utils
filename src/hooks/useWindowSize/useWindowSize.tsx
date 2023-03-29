@@ -1,12 +1,25 @@
 import { useCallback, useEffect, useState } from 'react';
 
-export const useWindowSize = (): number | null => {
-    const [width, setWidth] = useState<number | null>(
-        typeof document === 'undefined' ? null : document.documentElement.clientWidth,
+interface WindowSizes {
+    height: number;
+    width: number;
+}
+
+export const useWindowSize = (): WindowSizes | null => {
+    const [windowSizes, setWidthSizes] = useState<WindowSizes | null>(
+        typeof document === 'undefined'
+            ? null
+            : {
+                  width: document.documentElement.clientWidth,
+                  height: document.documentElement.clientHeight,
+              },
     );
 
     const handleWindowResize = useCallback(() => {
-        setWidth(document.documentElement.clientWidth);
+        setWidthSizes({
+            width: document.documentElement.clientWidth,
+            height: document.documentElement.clientHeight,
+        });
     }, []);
 
     useEffect(() => {
@@ -15,5 +28,5 @@ export const useWindowSize = (): number | null => {
         return () => window.removeEventListener('resize', handleWindowResize);
     }, [handleWindowResize]);
 
-    return width;
+    return windowSizes;
 };

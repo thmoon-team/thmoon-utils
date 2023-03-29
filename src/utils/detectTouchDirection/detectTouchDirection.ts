@@ -1,8 +1,12 @@
-export enum Direction {
+export enum DirectionType {
     DOWN = 'down',
     LEFT = 'left',
     RIGHT = 'right',
     UP = 'up',
+}
+
+export interface Direction {
+    direction: DirectionType;
 }
 
 export const detectTouchDirection = (
@@ -16,8 +20,8 @@ export const detectTouchDirection = (
     const diffX = startTouch.clientX - endTouch.clientX;
 
     if (Math.abs(diffY) > Math.abs(diffX)) {
-        return diffY < 0 ? Direction.DOWN : Direction.UP;
+        return { direction: diffY < 0 ? DirectionType.DOWN : DirectionType.UP };
     }
 
-    return diffX < 0 ? Direction.RIGHT : Direction.LEFT;
+    return { direction: diffX < 0 ? DirectionType.RIGHT : DirectionType.LEFT };
 };

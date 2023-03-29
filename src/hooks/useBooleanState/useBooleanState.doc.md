@@ -4,16 +4,16 @@
 import { useBooleanState } from 'thmoon-utils'
 
 const Demo = () => {
-    const [isOn, on, off, toggle] = useBooleanState();
+    const [value, setTrue, setFalse, toggle] = useBooleanState();
 
     return (
         <div>
-            <p>{isOn ? 'on' : 'off'}</p>
-            <button onClick={on} type="button">
-                on
+            <p>{value ? 'true' : 'false'}</p>
+            <button onClick={setTrue} type="button">
+                setTrue
             </button>
-            <button onClick={off} type="button">
-                off
+            <button onClick={setFalse} type="button">
+                setFalse
             </button>
             <button onClick={toggle} type="button">
                 toggle

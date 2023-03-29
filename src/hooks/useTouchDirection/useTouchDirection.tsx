@@ -41,7 +41,6 @@ export function useTouchDirection<T extends HTMLElement>({
                 onEnd(detectTouchDirection(startEvent, endEvent));
             }
             setEndEvent(undefined);
-            setEndEvent(undefined);
         },
         [onEnd, endEvent, startEvent],
     );

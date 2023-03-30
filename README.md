@@ -60,9 +60,10 @@ git cz
 <kbd>
     <img 
     src="https://raw.githubusercontent.com/commitizen/cz-cli/master/meta/screenshots/add-commit.png" 
-    caption="Далее у вас в консоли откроется данная тулза с набором команд для измемения"
     />
 </kbd>
+
+Далее у вас в консоли откроется данная тулза с набором команд для измемения
 
 ```
 feat:     Добавили новую фичу

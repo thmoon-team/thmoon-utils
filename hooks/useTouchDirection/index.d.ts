@@ -1,1 +1,0 @@
-export { useTouchDirection } from './useTouchDirection';

@@ -9,7 +9,6 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "@storybook/storybook-readme"
   ],
   "framework": "@storybook/react",
   "core": {

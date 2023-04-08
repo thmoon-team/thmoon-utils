@@ -1,5 +1,5 @@
 {
-    "{src}/**/*.{js,jsx,ts,tsx}": [
+    "src/**/*.{js,jsx,ts,tsx}": [
         "eslint --max-warnings=0 --fix \"{src,.storybook}/**/*.+(js|jsx|ts|tsx|json)\"",
         "prettier --write \"{src,.storybook}/**/*.+(js|jsx|ts|tsx|json)\""
     ]

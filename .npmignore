@@ -19,5 +19,6 @@ tsconfig.json
 webpack.config.js
 .huskyrc
 .lintstagedrc
+media
 
 

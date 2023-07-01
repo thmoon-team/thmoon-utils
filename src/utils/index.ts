@@ -1,2 +1,2 @@
-export type { Direction } from './detectTouchDirection';
-export { detectTouchDirection, DirectionType } from './detectTouchDirection';
+export * from './detectTouchDirection';
+export * from './validators';

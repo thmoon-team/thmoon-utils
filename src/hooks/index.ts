@@ -1,6 +1,8 @@
-export { useBooleanState } from './useBooleanState';
-export { useDebouncedValue } from './useDebouncedValue';
-export { useElementSize } from './useElementSize';
-export { useOuterClick } from './useOuterClick';
-export { useTouchDirection } from './useTouchDirection';
-export { useWindowSize } from './useWindowSize';
+export * from './useBooleanState';
+export * from './useDebouncedValue';
+export * from './useElementSize';
+export * from './useMergedRef';
+export * from './useOuterClick';
+export * from './useScrollTo';
+export * from './useTouchDirection';
+export * from './useWindowSize';

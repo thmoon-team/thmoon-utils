@@ -1,0 +1,1 @@
+export { isVimeoLink } from './isVimeoLink';

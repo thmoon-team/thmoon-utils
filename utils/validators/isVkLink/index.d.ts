@@ -1,0 +1,1 @@
+export { isVkLink } from './isVkLink';

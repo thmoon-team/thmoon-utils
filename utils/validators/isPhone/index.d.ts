@@ -1,0 +1,1 @@
+export { isPhone } from './isPhone';

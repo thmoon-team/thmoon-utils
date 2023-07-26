@@ -1,0 +1,1 @@
+export { isYoutubeLink } from './isYoutubeLink';
